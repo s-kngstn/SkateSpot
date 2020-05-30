@@ -5,52 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
 
   <title>SkateSpot | Skate Your City</title>
 </head>
-<body>
-  <!-- Navigation Bar -->
-  <nav id="main-nav">
-    
-    <div class="container">
-      <ul>
-        <li><a class="current" href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Sign Up</a></li>
-      </ul>
+<body id="home">
+  <!-- Hero | Navigation Bar & Search Area-->
+  <header id="hero">
+    <div class="navbar" id="navbar">
+      <h1 class="logo">
+        <span class="text-primary">Skate</span>Spot
+      </h1>
+      <nav>  
+        <ul>
+          <li><a class="current" href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+      </nav>
     </div>
 
-  </nav>
-
-  <!-- Search Area | Showcase -->
-  <header id="showcase">
-
-    <div class="container">
-
-      <div class="showcase-container">
-
-        <div class="showcase-content">
-
+    <div class="content">
           <h1>SkateSpot</h1>
           <h2>Skate Your City</h2>
           <br>
           <label class="label" for="text">Where would you like to skate today?</label>
-          <form action="#">
+          <form action="#" class="search-form">
           <input type="text" id="text" name="text_name" class="search-bar"/>
           </form>
           <br>
-          <a href="#" class="btn">Search</a>
-          
-        </div>
-
-      </div>
-
+          <a href="#" class="btn">Search</a> 
     </div>
-
-
   </header>
+
+  <!-- About -->
+  <main class="main-about">
+  <section class="grid">
+    <section id="about" class="about">
+      <div>
+        <div class="about-1">
+          <h3>The What</h3
+          <p>SkateSpot is a free to use application that locates peer-selected & peer-reviewed skateboarding locations near you.</p>
+        </div>
+      </div>
+    </section>  
+
+    <section class="about-pic"> 
+      <div>
+        <div class="about-pic-container">
+        </div>
+      </div>
+    </section>
+    </section>
+
+
+    <section class="grid">
+        <section class="work-pic"> 
+          <div>
+            <div class="work-pic-container">
+            </div>
+          </div>
+        </section>
+
+        <div class="work-1">
+          <h3>The How</h3>
+            <p>Users who register to the website can post a photo, location, and review any location they found and enjoyed skating.</p>
+            <div class="icons"><i class="fas fa-camera fa-2x"></i></div>
+            <br>
+            <p>Locations will be shared publicly so other skaters can skate the same SkateSpot.</p>
+            <div class="icons">
+            <i class="fas fa-map-marked-alt fa-2x"></i></div>
+            <br>
+            <p>Rate, check-in, and keep eveyone up to date with SkateSpots in your neighborhood.</p>
+            <div class="icons">
+            <i class="fas fa-calendar-check fa-2x"></i></div>
+        </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="social"></div>
+    <p>&copy; 2020 - SkateSpot</p>
+  </footer>
 </body>
 </html>
