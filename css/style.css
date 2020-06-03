@@ -11,6 +11,11 @@
   font-weight: lighter;
 }
 
+.text-secondary {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +25,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
-  background: var(--light-color);
+  background: #fff;
 }
 
 a {
@@ -47,10 +52,27 @@ h3:after {
   display: block;
   height: 2px;
   background-color: var(--primary-color);
-  content: " ";
+  content: ' ';
   width: 100px;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 5rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  letter-spacing: 2.7px;
 }
 
 /* Navigation */
@@ -73,7 +95,7 @@ h3:after {
 }
 
 .navbar ul li a {
-  padding: 10px 20px;
+  padding: 10px 5px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -89,12 +111,10 @@ h3:after {
   border-bottom: 2px var(--primary-color) solid;
 }
 
-
 /* Showcase */
 #hero * {
   z-index: 10;
 }
-
 
 #hero {
   background: url('/img/skater-3.jpeg') no-repeat center center/cover;
@@ -111,7 +131,7 @@ h3:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #hero .content {
@@ -136,7 +156,7 @@ h3:after {
   text-transform: uppercase;
   letter-spacing: 0.9rem;
   font-weight: 400;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 #hero .content .label {
@@ -144,37 +164,24 @@ h3:after {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-weight: 400;
-  margin-bottom: 10px;
+  padding-bottom: 4rem;
 }
-
-#hero .content .search-bar {
-  width: 300px;
-  height: 25px;
-  border-radius: 4px;
-}
-
-#hero .content input {
-  border: none;
-}
-
-#hero .content input:focus {
-  outline-color: var(--secondary-color);
-}
-
 
 #hero .content .btn {
   text-decoration: none;
   color: #fff;
-  background: #4c4c4c;
-  border: 1px solid #4c4c4c;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
   border-radius: 10px;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  margin-bottom: 5rem;
 }
 
 #hero .content .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
+  letter-spacing: 2.7px;
 }
 
 /* About Section */
@@ -184,11 +191,10 @@ h3:after {
   grid-template-columns: 50% 50%;
   height: 50vh;
 }
- 
+
 .main-about {
   padding: 0.3rem 0;
 }
-
 
 .about {
   display: flex;
@@ -212,14 +218,12 @@ h3:after {
   font-weight: 300;
 }
 
-
 .about-pic {
-  background-image: linear-gradient(rgba(222, 184, 135,0.2), rgba(222, 184, 135,0.1)),
-  url('/img/skate-phone.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+    url('/img/skate-phone.jpg');
   background-size: cover;
   background-position: center;
 }
-
 
 .work-1 {
   display: flex;
@@ -241,34 +245,88 @@ h3:after {
   font-family: 'Raleway', sans-serif;
   letter-spacing: 0.1rem;
   font-weight: 300;
-  color: black;
   text-align: center;
 }
 
 .work-pic {
-  background-image: linear-gradient(rgba(222, 184, 135,0.2), rgba(222, 184, 135,0.1)),
-  url('/img/skater-2.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+    url('/img/skater-2.jpg');
   background-size: cover;
   background-position: center;
 }
 
+/* Contact Us */
 
+.contact-form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 11.5rem 6rem;
+  background-color: rgb(243, 243, 243);
+}
 
+.contact-form h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+*:focus {
+  outline-color: var(--primary-color);
+}
+
+.contact-form .btn {
+  margin-top: 1rem;
+}
+
+.contact-form label {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+}
 
 /* Footer */
 
-footer {
+.footer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 50px;
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  justify-content: space-between;
+  background: #333;
+  width: 100%;
+  height: 70px;
+  padding: 1rem;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
-
-footer > p {
-  text-align: center;
+.footer a i {
+  padding: 1rem 1.2rem;
 }
 
+.footer .copyright {
+  padding: 1rem 1.2rem;
+  color: #fff;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+.footer p {
+  font-size: small;
+}
