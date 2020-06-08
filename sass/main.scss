@@ -52,13 +52,6 @@ body {
 }
 
 /* ==== LOGO ==== */
-
-.logo-box {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
 .logo {
   display: block;
   color: $main-color;
@@ -69,11 +62,17 @@ body {
   border: 2px solid burlywood;
   border-radius: 100px;
   padding: 5px 25px;
-}
 
-.logo .logo-color {
-  color: $secondary-color; /* <-- Change Post to White */
-  font-weight: 800;
+  &-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  &-color {
+    color: $secondary-color; /* <-- Change Post to White */
+    font-weight: 800;
+  }
 }
 
 /* ==== HEADER ==== */
@@ -82,82 +81,84 @@ body {
   padding: 75px 30px 40px 30px;
   background-color: rgb(233, 233, 233);
   margin: 0 auto;
-}
 
-.header-inner {
-  height: 80vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(0, 0, 0, 0.801),
-      rgba(0, 0, 0, 0.322)
-    ),
-    url(/img/skater-3.jpeg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  position: relative;
-  /* clip-path: polygon(0 0, 100% 0%, 100% 83%, 0 93%); */
-}
+  &__inner {
+    height: 80vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.801),
+        rgba(0, 0, 0, 0.322)
+      ),
+      url(/img/skater-3.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    /* clip-path: polygon(0 0, 100% 0%, 100% 83%, 0 93%); */
 
-.text-box {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    &__text-box {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 
 .heading-primary {
   color: $white-color;
   font-family: 'Playfair Display', serif;
-}
 
-.heading-primary-main,
-.heading-primary-second,
-.heading-primary-third {
-  display: block;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: 1.2;
-}
+  &-main,
+  &-second,
+  &-third {
+    display: block;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
 
-.heading-primary-main,
-.heading-primary-second {
-  font-size: 55px;
-}
+  &-main,
+  &-second {
+    font-size: 55px;
+  }
 
-.heading-primary-third {
-  font-size: 26px;
+  &-third {
+    font-size: 26px;
+  }
 }
 
 /* ==== BUTTON ==== */
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 10px 25px;
-  display: inline-block; /* Gives inline element some padding */
-  border-radius: 100px;
-  transition: all 0.2s;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 25px;
+    display: inline-block; /* Gives inline element some padding */
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
-}
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+  }
 
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
 
-.btn-main-color {
-  background-color: $main-color;
-  color: $white-color;
-  font-weight: 500;
-}
+  &-main-color {
+    background-color: $main-color;
+    color: $white-color;
+    font-weight: 500;
+  }
 
-.btn-animated {
-  animation: moveInButton 0.5s ease-out 1s;
-  animation-fill-mode: backwards;
+  &-animated {
+    animation: moveInButton 0.5s ease-out 1s;
+    animation-fill-mode: backwards;
+  }
 }
