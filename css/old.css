@@ -1,0 +1,418 @@
+:root {
+  --primary-color: #db5f2e;
+  --secondary-color: #7a7a7a;
+  --light-color: #cccccc;
+  --dark-color: #333;
+  --max-width: 1100px;
+}
+
+.text-primary {
+  color: var(--primary-color);
+  font-weight: lighter;
+}
+
+.text-secondary {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  background: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.icons {
+  color: var(--primary-color);
+  display: flex;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+h3:after {
+  display: block;
+  height: 2px;
+  background-color: var(--primary-color);
+  content: ' ';
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: var(--primary-color);
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 7px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 5rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  letter-spacing: 0.3rem;
+  transition: 500ms;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  opacity: 0.8;
+  width: 100%;
+  position: fixed;
+  height: 70px;
+  top: 0;
+  padding: 0 30px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  padding: 10px 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 0 5px;
+}
+
+.navbar ul li a.current {
+  background: #333;
+}
+
+.navbar ul li a:hover {
+  /* background: var(--secondary-color); */
+  border-bottom: 2px var(--primary-color) solid;
+}
+
+/* Showcase */
+#hero * {
+  z-index: 10;
+}
+
+#hero {
+  background: url('/img/skater-3.jpeg') no-repeat center center/cover;
+  position: relative;
+  height: 100vh;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+#hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+#hero .content h1 {
+  font-size: 55px;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 200;
+}
+
+#hero .content h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+#hero .content .label {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+  padding-bottom: 4rem;
+}
+
+/* About Section */
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.main-about {
+  padding: 0.3rem 0;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #d6d1c8;
+  padding: 2rem;
+}
+
+.about .about-1 > h3 {
+  font-weight: bold;
+  padding-bottom: 1.5rem;
+}
+
+.about .about-1 > p {
+  letter-spacing: 0.1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+
+.about-pic {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+    url('/img/skate-phone.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.work-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6d1c8;
+  padding: 2rem;
+}
+
+.work-1 > h3 {
+  font-weight: bold;
+  padding-bottom: 1.5rem;
+}
+
+.work-1 > p {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.work-pic {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+    url('/img/skater-2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Contact Us */
+
+.contact-form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 14.5rem 6rem 3rem 6rem;
+  background-color: rgb(243, 243, 243);
+}
+
+.contact-form h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+.contact-form .btn {
+  margin-top: 1rem;
+  width: 50%;
+}
+
+.contact-form label {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+}
+
+/* Sign Up Page */
+
+#sign-up h1 {
+  margin-bottom: 1rem;
+}
+
+#sign-up .container {
+  padding: 6.7rem 10rem;
+}
+
+#sign-up .container > h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+#sign-up .container > p {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 4rem;
+}
+
+#sign-up .container .signup-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #bdbdbd;
+  border-radius: 4px;
+}
+
+#sign-up .container .signup-box .text-fields {
+  display: grid;
+  grid-template-areas:
+    'name surname'
+    'email email'
+    'password password'
+    'birthdate-1 birthdate'
+    'submit submit';
+  grid-gap: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+#sign-up .container .signup-box .text-fields .name-input {
+  grid-area: name;
+}
+
+#sign-up .container .signup-box .text-fields .surname-input {
+  grid-area: surname;
+}
+
+#sign-up .container .signup-box .text-fields .email-input {
+  grid-area: email;
+}
+#sign-up .container .signup-box .text-fields .password-input {
+  grid-area: password;
+}
+#sign-up .container .signup-box .text-fields .birth-input {
+  grid-area: birthdate-1;
+  color: #808080;
+}
+#sign-up .container .signup-box .text-fields .date-input {
+  grid-area: birthdate;
+  color: #808080;
+}
+
+#sign-up .container .signup-box .text-fields .submit-input {
+  margin-top: 2rem;
+  grid-area: submit;
+}
+
+#sign-up .container .signup-box .text-fields input {
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #bdbdbd;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  width: 100%;
+  height: 70px;
+  padding: 1rem;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.footer a i {
+  padding: 1rem 1.2rem;
+}
+
+.footer .copyright {
+  padding: 1rem 1.2rem;
+  color: #fff;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+.footer p {
+  font-size: small;
+}

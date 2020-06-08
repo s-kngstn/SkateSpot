@@ -1,22 +1,12 @@
-/* ==== UTILITY ==== */
+$main-color: #db5f2e;
+$secondary-color: #7a7a7a;
+$light-color: #ccc;
+$dark-color: #222;
+$white-color: #fff;
 
-:root {
-  --main-color: #db5f2e;
-  --secondary-color: #7a7a7a;
-  --light-color: #ccc;
-  --dark-color: #222;
-}
-
-.bottom-line {
-  height: 3px;
-  width: 1rem;
-  background: var(--main-color);
-  display: block;
-  position: absolute;
-  margin: 0 auto 1rem auto;
-}
-
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,8 +17,17 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: var(--secondary-color);
+  color: $secondary-color;
   padding: 10px;
+}
+
+.bottom-line {
+  height: 3px;
+  width: 1rem;
+  background: $main-color;
+  display: block;
+  position: absolute;
+  margin: 0 auto 1rem auto;
 }
 
 .border-shadow {
@@ -36,6 +35,20 @@ body {
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* ANIMATIONS */
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ==== LOGO ==== */
@@ -48,18 +61,18 @@ body {
 
 .logo {
   display: block;
-  color: var(--main-color);
+  color: $main-color;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   font-weight: 500;
-  background-color: var(--dark-color);
+  background-color: #222;
   border: 2px solid burlywood;
   border-radius: 100px;
   padding: 5px 25px;
 }
 
 .logo .logo-color {
-  color: var(--secondary-color); /* <-- Change Post to White */
+  color: $secondary-color; /* <-- Change Post to White */
   font-weight: 800;
 }
 
@@ -67,7 +80,7 @@ body {
 
 .header-outer {
   padding: 75px 30px 40px 30px;
-  /* background-color: rgb(233, 233, 233); */
+  background-color: rgb(233, 233, 233);
   margin: 0 auto;
 }
 
@@ -94,7 +107,7 @@ body {
 }
 
 .heading-primary {
-  color: #fff;
+  color: $white-color;
   font-family: 'Playfair Display', serif;
 }
 
@@ -116,7 +129,7 @@ body {
   font-size: 26px;
 }
 
-/* BUTTON */
+/* ==== BUTTON ==== */
 
 .btn:link,
 .btn:visited {
@@ -139,26 +152,12 @@ body {
 }
 
 .btn-main-color {
-  background-color: var(--main-color);
-  color: #fff;
+  background-color: $main-color;
+  color: $white-color;
   font-weight: 500;
 }
 
 .btn-animated {
   animation: moveInButton 0.5s ease-out 1s;
   animation-fill-mode: backwards;
-}
-
-/* ANIMATIONS */
-
-@keyframes moveInButton {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
