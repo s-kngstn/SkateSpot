@@ -1,0 +1,29 @@
+/* ==== HEADER ==== */
+
+.header-outer {
+  padding: 7.5rem 3rem 4rem 3rem;
+  background-color: rgb(233, 233, 233);
+  margin: 0 auto;
+
+  &__inner {
+    height: 80vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.801),
+        rgba(0, 0, 0, 0.322)
+      ),
+      url(/img/skater-3.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    /* clip-path: polygon(0 0, 100% 0%, 100% 83%, 0 93%); */
+
+    &__text-box {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

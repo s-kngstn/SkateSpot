@@ -1,0 +1,34 @@
+/* ==== BUTTON ==== */
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    display: inline-block; /* Gives inline element some padding */
+    border-radius: 10rem;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &-main-color {
+    background-color: $main-color;
+    color: $white-color;
+    font-weight: 500;
+  }
+
+  &-animated {
+    animation: moveInButton 0.5s ease-out 1s;
+    animation-fill-mode: backwards;
+  }
+}
