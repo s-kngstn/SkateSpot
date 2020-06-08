@@ -31,6 +31,13 @@ body {
   padding: 10px;
 }
 
+.border-shadow {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
 /* ==== LOGO ==== */
 
 .logo-box {
@@ -43,7 +50,12 @@ body {
   display: block;
   color: var(--main-color);
   font-family: 'Raleway', sans-serif;
+  font-size: 20px;
   font-weight: 500;
+  background-color: var(--dark-color);
+  border: 2px solid burlywood;
+  border-radius: 100px;
+  padding: 5px 25px;
 }
 
 .logo .logo-color {
@@ -55,7 +67,7 @@ body {
 
 .header-outer {
   padding: 75px 30px 40px 30px;
-  background-color: rgb(233, 233, 233);
+  /* background-color: rgb(233, 233, 233); */
   margin: 0 auto;
 }
 
@@ -71,10 +83,6 @@ body {
   background-position: center;
   border-radius: 20px;
   position: relative;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
   /* clip-path: polygon(0 0, 100% 0%, 100% 83%, 0 93%); */
 }
 
@@ -91,17 +99,66 @@ body {
 }
 
 .heading-primary-main,
-.heading-primary-sub {
+.heading-primary-second,
+.heading-primary-third {
   display: block;
   font-weight: 700;
   letter-spacing: 2px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
-.heading-primary-main {
-  font-size: 70px;
+.heading-primary-main,
+.heading-primary-second {
+  font-size: 55px;
 }
 
-.heading-primary-sub {
-  font-size: 60px;
+.heading-primary-third {
+  font-size: 26px;
+}
+
+/* BUTTON */
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 25px;
+  display: inline-block; /* Gives inline element some padding */
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-main-color {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn-animated {
+  animation: moveInButton 0.5s ease-out 1s;
+  animation-fill-mode: backwards;
+}
+
+/* ANIMATIONS */
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
