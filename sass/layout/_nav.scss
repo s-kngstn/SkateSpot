@@ -1,0 +1,40 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 1rem 1.5rem;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: $dark-grey;
+    text-transform: uppercase;
+    border-bottom: 2px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $main-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+      color: $main-color;
+      background-color: $color-grey-light-1;
+      transition: all 0.2s;
+
+      &:hover {
+        border: $main-color;
+        border-radius: 20px;
+        background-color: $main-color;
+        color: $white-color;
+        padding: 8px 18px;
+      }
+    }
+  }
+}

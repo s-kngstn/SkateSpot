@@ -11,12 +11,16 @@
     display: inline-block;
     margin-bottom: 0.5rem;
     background-image: linear-gradient(
-      to right,
-      $main-color,
-      $complimentary-color
+      to bottom,
+      $complimentary-color,
+      $main-color
     );
     -webkit-background-clip: text;
     color: transparent;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &:hover {

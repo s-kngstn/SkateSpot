@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
@@ -37,13 +38,21 @@
     <!-- ==== HEADER ==== -->
     <header class="header-outer">
       <!-- ==== LOGO ==== -->
-      <div class="logo-box">
+      <nav class="main-nav">
         <h1 class="logo">
           <span class="logo-color"
             ><span class="logo-underline">S</span>kate</span
           >Spot
         </h1>
-      </div>
+
+        <ul class="list-nav heading-tertiary">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Tell me more</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Connect</a></li>
+          <li><a href="#signup" class="current">Sign up</a></li>
+        </ul>
+      </nav>
       <!-- ==== HEADER ==== -->
       <div class="header-outer__inner">
         <div class="header-outer__inner__text-box">
@@ -80,14 +89,16 @@
         <div class="row">
           <div class="col-1-of-2">
             <h3 class="heading-tertiary u-margin-bottom-small">
-              Fresh ledges, bigger hills, longer rails
+              <span class="logo-underline">F</span>resh ledges, bigger hills,
+              longer rails
             </h3>
             <p class="paragraph">
               SkateSpot is a free to use application that locates peer-selected
               & reviewed skateboarding locations near you.
             </p>
             <h3 class="heading-tertiary u-margin-bottom-small">
-              Share your favorite locations with friends
+              <span class="logo-underline">S</span>hare your favorite locations
+              with friends
             </h3>
             <p class="paragraph">
               SkateSpot is a free to use application that locates peer-selected
@@ -124,7 +135,7 @@
             <div class="feature-box">
               <i class="feature-box__icon fas fa-camera fa-2x"></i>
               <h3 class="heading-tertiary u-margin-bottom-small">
-                Capture your spot
+                <span class="logo-underline">C</span>apture your spot
               </h3>
               <p class="feature-box__text">
                 Registed users can snap a photo & review any location they
@@ -137,7 +148,7 @@
             <div class="feature-box">
               <i class="feature-box__icon fas fa-calendar-check fa-2x"></i>
               <h3 class="heading-tertiary u-margin-bottom-small">
-                neighborhood Watch
+                <span class="logo-underline">N</span>eighborhood Watch
               </h3>
               <p class="feature-box__text">
                 Rate, check-in, & keep eveyone up-to-date with SkateSpots in
@@ -150,7 +161,7 @@
             <div class="feature-box">
               <i class="feature-box__icon fas fa-map-marked-alt fa-2x"></i>
               <h3 class="heading-tertiary u-margin-bottom-small">
-                Sharing is caring
+                <span class="logo-underline">S</span>haring is caring
               </h3>
               <p class="feature-box__text">
                 Locations will be shared publicly so other skaters can skate the
@@ -164,7 +175,7 @@
 
       <section class="section-signup">
         <h2 class="heading-signup">
-          <span class="heading-signup-main">Sign up for</span
+          <span id="signup" class="heading-signup-main">Sign up for</span
           ><span class="heading-signup-second">early access.</span>
         </h2>
 
@@ -176,6 +187,72 @@
         />
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img
+          src="/img/skatespot-logo-dark.jpg"
+          alt="Skate Spot Logo"
+          class="footer__logo"
+        />
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Company</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Careers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy policy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__navigation__social">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link"
+                  ><i class="fab fa-facebook fa-2x"></i
+                ></a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link"
+                  ><i class="fab fa-twitter fa-2x"></i
+                ></a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link"
+                  ><i class="fab fa-instagram fa-2x"></i
+                ></a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link"
+                  ><i class="fab fa-snapchat fa-2x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Built by <a href="#" class="footer__link">Sam Kingston</a> for his
+            portfolio. If you're interested in seeing more of my work please
+            visit <a href="" class="footer__link">dribbble</a> and other
+            <a href="" class="footer__link">social media</a>
+            platforms. Copyright &copy; by Sam Kingston.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <!-- <section class="grid-test">
       <div class="row">

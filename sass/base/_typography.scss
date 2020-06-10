@@ -4,7 +4,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: $secondary-color;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
 .bottom-line {
@@ -33,12 +33,6 @@ body {
   // border: 2px solid burlywood;
   // border-radius: 10rem;
   padding: 0.5rem 0.5rem;
-
-  &-box {
-    position: absolute;
-    top: 0.5rem;
-    left: 1.5rem;
-  }
 
   &-color {
     color: $secondary-color; /* <-- Change Post to White */
@@ -86,7 +80,8 @@ body {
   background-image: linear-gradient(
     to right,
     $main-color,
-    $complimentary-color
+    $complimentary-color,
+    $main-color
   );
   -webkit-background-clip: text;
   color: transparent;
@@ -99,6 +94,7 @@ body {
 
 .heading-tertiary {
   font-size: $default-font-size;
+  color: $dark-grey;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -123,28 +119,5 @@ body {
   &-second {
     display: block;
     font-size: 7rem;
-  }
-}
-
-#email {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: $main-color;
-  border: none;
-  width: 50rem;
-  height: 6rem;
-
-  &::placeholder {
-    padding: 0.3rem;
-    color: $white-color;
-    font-size: 4rem;
-    line-height: 1;
-    border-bottom: 4px solid $white-color;
-  }
-
-  &:focus {
-    outline: none;
-    color: $white-color;
-    font-size: 4rem;
   }
 }
