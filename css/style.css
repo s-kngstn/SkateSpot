@@ -32,7 +32,7 @@ body {
 .bottom-line {
   height: 0.3rem;
   width: 1rem;
-  background: #db5f2e;
+  background: #eb5c23;
   display: block;
   position: absolute;
   margin: 0.5rem auto 1rem auto; }
@@ -42,7 +42,7 @@ body {
 
 .logo {
   display: block;
-  color: #db5f2e;
+  color: #eb5c23;
   font-family: 'Raleway', sans-serif;
   font-size: 3rem;
   font-weight: 500;
@@ -56,7 +56,7 @@ body {
     /* <-- Change Post to White */
     font-weight: 800; }
   .logo-underline {
-    border-bottom: 2px solid #db5f2e; }
+    border-bottom: 2px solid #eb5c23; }
 
 .heading-primary {
   color: #fff;
@@ -81,7 +81,7 @@ body {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #db5f2e, #db7049);
+  background-image: linear-gradient(to right, #eb5c23, #db7049);
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.2s; }
@@ -97,6 +97,35 @@ body {
   font-size: 1.6rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
+
+.heading-signup {
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff; }
+  .heading-signup-main {
+    display: block;
+    font-size: 7rem; }
+  .heading-signup-second {
+    display: block;
+    font-size: 7rem; }
+
+#email {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #eb5c23;
+  border: none;
+  width: 50rem;
+  height: 6rem; }
+  #email::placeholder {
+    padding: 0.3rem;
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1;
+    border-bottom: 4px solid #fff; }
+  #email:focus {
+    outline: none;
+    color: #fff;
+    font-size: 4rem; }
 
 .u-center-text {
   text-align: center; }
@@ -131,7 +160,7 @@ body {
 
 .btn-main-color {
   background-color: #fff;
-  color: #db5f2e;
+  color: #eb5c23;
   font-weight: 500; }
 
 .btn-animated {
@@ -140,15 +169,15 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #db5f2e;
+  color: #eb5c23;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #db5f2e;
+  border-bottom: 1px solid #eb5c23;
   padding: 3px;
   transition: all 0.2s; }
 
 .btn-text:hover {
-  background-color: #db5f2e;
+  background-color: #eb5c23;
   color: #fff;
   border-radius: 0.2rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
@@ -183,6 +212,24 @@ body {
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.9);
+  transition: transform 0.2s; }
+  .feature-box__icon {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background-image: linear-gradient(to right, #eb5c23, #db7049);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.1);
+    box-shadow: 0 3.5rem 7rem rgba(0, 0, 0, 0.9); }
 
 /* ==== HEADER ==== */
 .header-outer {
@@ -229,4 +276,17 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0; }
+  padding: 15rem 0 25rem 0; }
+
+.section-features {
+  margin-top: -5rem;
+  padding: 25rem 0;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3), rgba(247, 247, 247, 0.99)), url(/img/skater-features.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+
+.section-signup {
+  background-color: #eb5c23;
+  position: relative;
+  padding: 10rem 20rem; }

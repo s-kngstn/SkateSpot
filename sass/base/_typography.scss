@@ -110,3 +110,41 @@ body {
     margin-bottom: 3rem;
   }
 }
+
+.heading-signup {
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+
+  &-main {
+    display: block;
+    font-size: 7rem;
+  }
+  &-second {
+    display: block;
+    font-size: 7rem;
+  }
+}
+
+#email {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: $main-color;
+  border: none;
+  width: 50rem;
+  height: 6rem;
+
+  &::placeholder {
+    padding: 0.3rem;
+    color: $white-color;
+    font-size: 4rem;
+    line-height: 1;
+    border-bottom: 4px solid $white-color;
+  }
+
+  &:focus {
+    outline: none;
+    color: $white-color;
+    font-size: 4rem;
+  }
+}
