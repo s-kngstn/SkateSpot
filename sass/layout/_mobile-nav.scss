@@ -1,0 +1,139 @@
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  right: 2rem;
+  z-index: 2000;
+
+  &__toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3000;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    opacity: 0;
+
+    &:checked ~ .menu-wrap__menu {
+      visibility: visible;
+
+      & > div {
+        transform: scale(1);
+        transition-duration: 0.1s;
+
+        & > div {
+          opacity: 1;
+          transition: opacity 0.1s ease;
+        }
+      }
+    }
+  }
+
+  &__hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 6rem;
+    height: 6rem;
+    padding: 1rem;
+    background: rgba($dark-color, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > div {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background-color: $main-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 2000;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background-color: inherit;
+      }
+
+      &:after {
+        top: 10px;
+        background-color: inherit;
+      }
+    }
+  }
+
+  &__toggler:checked + &__hamburger > div {
+    transform: rotate(135deg);
+
+    &:before,
+    &:after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__toggler:checked:hover + &__hamburger > div {
+    transform: rotate(225deg);
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > div {
+      background-color: rgba($dark-color, 0.9);
+      border-radius: 50%;
+      width: 200vw;
+      height: 200vw;
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0);
+      transition: all 0.1s ease;
+
+      & > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.1s ease;
+
+        & > ul > li {
+          list-style: none;
+          color: $main-color;
+          padding: 1rem;
+
+          & > a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+
+            &:hover {
+              border-bottom: 2px solid $white-color;
+              padding-bottom: 3px;
+              transition: border-color 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

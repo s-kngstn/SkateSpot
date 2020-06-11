@@ -10,7 +10,7 @@
   }
 
   &__logo {
-    width: 15rem;
+    width: 20rem;
     height: auto;
   }
 
@@ -49,6 +49,22 @@
     &:hover,
     &:active {
       color: $main-color;
+    }
+
+    &_fb:hover {
+      color: #43609b;
+    }
+    &_tw:hover {
+      color: #3ea1f2;
+    }
+    &_in:hover {
+      color: #833ab4;
+    }
+    &_sn:hover {
+      color: #fafc01;
+    }
+    &_yt:hover {
+      color: #f71701;
     }
   }
 
