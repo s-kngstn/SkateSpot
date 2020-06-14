@@ -166,6 +166,25 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
   transform: translateY(0); }
 
+.btn-signup {
+  position: absolute; }
+  .btn-signup, .btn-signup:link, .btn-signup:visited {
+    font-size: 6rem;
+    font-weight: bolder;
+    background-color: #ff834a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    line-height: 1.2;
+    width: 10rem; }
+  .btn-signup:hover {
+    border-bottom: 4px solid #fff;
+    transition: all 0.4s; }
+  .btn-signup:active, .btn-signup:focus {
+    outline: none;
+    border-bottom: 4px solid #ff834a; }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -197,18 +216,24 @@ body {
   margin-top: 1rem;
   background-color: #ff834a;
   border: none;
-  width: 50rem;
-  height: 6rem; }
+  font-size: 3.5rem;
+  color: #fff;
+  width: 44rem;
+  height: 6rem;
+  position: relative; }
   #email::placeholder {
     padding: 0.3rem;
     color: #fff;
-    font-size: 4rem;
-    line-height: 1;
-    border-bottom: 4px solid #fff; }
+    font-size: 3.5rem;
+    line-height: 0.9; }
   #email:focus {
     outline: none;
     color: #fff;
-    font-size: 4rem; }
+    font-size: 3.5rem; }
+  #email:focus:invalid {
+    border-bottom: 4px solid #e04141; }
+  #email::-webkit-input-placeholder {
+    color: #fff; }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -462,11 +487,11 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 15rem 0 25rem 0; }
+  padding: 25rem 0 25rem 0; }
 
 .section-features {
   margin-top: -5rem;
-  padding: 25rem 0;
+  padding: 35rem 0;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3), rgba(247, 247, 247, 0.99)), url(/img/skater-features.jpg);
   background-size: cover;
   background-position: center;
@@ -475,4 +500,4 @@ body {
 .section-signup {
   background-color: #ff834a;
   position: relative;
-  padding: 10rem 20rem; }
+  padding: 20rem 20rem; }

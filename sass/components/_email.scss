@@ -3,20 +3,30 @@
   margin-top: 1rem;
   background-color: $complimentary-color;
   border: none;
-  width: 50rem;
+  font-size: 3.5rem;
+  color: $white-color;
+  width: 44rem;
   height: 6rem;
+  position: relative;
 
   &::placeholder {
     padding: 0.3rem;
     color: $white-color;
-    font-size: 4rem;
-    line-height: 1;
-    border-bottom: 4px solid $white-color;
+    font-size: 3.5rem;
+    line-height: 0.9;
   }
 
   &:focus {
     outline: none;
     color: $white-color;
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+
+  &:focus:invalid {
+    border-bottom: 4px solid rgb(224, 65, 65);
+  }
+
+  &::-webkit-input-placeholder {
+    color: $white-color;
   }
 }
