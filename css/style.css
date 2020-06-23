@@ -1,3 +1,22 @@
+/*
+0 - 600px:           Phone
+600 - 900px:         Tablet Portrait
+900 - 1200px:        Tablet Landscape
+1200 - 1800px is where our normal styles apply
+1800px + :           Big Desktop
+
+
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography, general layout + grid > page layout > components
+
+1em = 16px
+*/
 /* ANIMATIONS */
 @keyframes moveInButton {
   0% {
@@ -17,6 +36,18 @@
 html {
   font-size: 62.5%;
   background-color: #f7f7f7; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -500,6 +531,9 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
+  @media (max-width: 75em) {
+    .section-features {
+      padding: 35rem 5rem; } }
 
 .section-signup {
   background-color: #ff834a;

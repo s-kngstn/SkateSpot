@@ -8,8 +8,24 @@
 
 html {
   // This defines what 1rem is
-  font-size: 62.5%;
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
   background-color: $color-grey-light-1;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1 rem should = 9px, 9/16 is 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1 rem should = 8px, 8/16(16 is default font size) = 50%
+  }
+
+  @include respond(phone) {
+    font-size: 37.5%; //1 rem should = 6px, 6/16(16 is default font size) = 37.5%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12/16 is 75%
+  }
 }
 
 body {

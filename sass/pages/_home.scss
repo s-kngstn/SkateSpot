@@ -16,6 +16,10 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  @include respond(tab-land) {
+    padding: 35rem 5rem;
+  }
 }
 
 .section-signup {
